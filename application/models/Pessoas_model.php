@@ -12,6 +12,11 @@ class Pessoas_model extends CI_Model
 		parent::__construct();
 	}
 
+	/** Os parametros para o metodo são 
+	* 1º a tabela do insert e o 
+	* 2º o array com as informações para serem inseridas. 
+	* Importante, os indices da array tem que ser igual ao cabeçalho da tabela 
+	*/
 	function inserir($data)
 	{
 		return $this->db->inserir('pessoas', $data);
@@ -21,6 +26,5 @@ class Pessoas_model extends CI_Model
 	{
 		$query = $this->db->get('pessoas');
 		return $query->result();
-	}
-	
+	}	
 }

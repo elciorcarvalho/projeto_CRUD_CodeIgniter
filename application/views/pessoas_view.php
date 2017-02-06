@@ -13,6 +13,16 @@
     <meta charset="UTF-8" />
 </head>
 <body>
-   <h1>Parabéns! Você já deu o primeiro passo.</h1>
+   <?php echo form_open('pessoas/inserir', 'id="form-pessoas"'); ?>
+
+   <label for="nome">Nome: </label><br>
+   <input type="text" name="nome" value="<?php echo set_value('nome') ?>">
+   <div class="error"><?php echo form_error('nome') ?></div>
+   <label for="email">Email: </label><br>
+   <input type="text" name="email" value="<?php echo set_value('email'); ?>">
+   <div class="error"><?php echo form_error('email'); ?></div>
+   <input type="submit" name="cadastrar" value="Cadastrar">
+
+   <?php echo form_close(); ?>
 </body>
 </html>
