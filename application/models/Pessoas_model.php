@@ -22,4 +22,5 @@ class Pessoas_model extends CI_Model
 		$query = $this->db->get('pessoas');
 		return $query->result();
 	}
+	
 }
